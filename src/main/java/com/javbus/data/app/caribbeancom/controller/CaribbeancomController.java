@@ -1,5 +1,6 @@
 package com.javbus.data.app.caribbeancom.controller;
 
+import com.javbus.data.common.http.Response;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,8 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class CaribbeancomController {
 
     @ApiOperation(value = "列表")
-    @PostMapping(value ="/list")
-    public Object getList(@RequestParam(value="userId")String userId){
-        return  null;
+    @PostMapping(value = "/list")
+    public Response getList(@RequestParam(value = "userId") String userId) {
+        return Response.success();
     }
 }

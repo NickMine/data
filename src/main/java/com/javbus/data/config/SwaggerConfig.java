@@ -31,7 +31,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(api)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.swaggerTest.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.javbus.data.app"))
                 .paths(PathSelectors.any())
                 .build();
     }
