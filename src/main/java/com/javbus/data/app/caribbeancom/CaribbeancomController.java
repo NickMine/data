@@ -1,8 +1,10 @@
 package com.javbus.data.app.caribbeancom;
 
+import com.javbus.data.base.movie.MovieComponent;
 import com.javbus.data.common.http.Response;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,9 +20,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/caribbean/com")
 public class CaribbeancomController {
 
+    @Autowired
+    private MovieComponent movieComponent;
+
     @ApiOperation(value = "列表")
     @PostMapping(value = "/list")
     public Response getList(@RequestParam(value = "userId") String userId) {
         return Response.success();
+    }
+    @ApiOperation(value = "test")
+    @PostMapping(value = "/test")
+    public Response test(@RequestParam(value = "userId") String userId) {
+        return Response.success(movieComponent.test());
     }
 }

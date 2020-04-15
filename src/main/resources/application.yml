@@ -1,0 +1,18 @@
+server:
+  port: 8088
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost/db_jbus?useSSL=false&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #springboot的jdbc加载文件路径为com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      #更新或者创建数据表结构
+    show-sql: true
+    #控制台显示SQL
+
+swagger: enable
