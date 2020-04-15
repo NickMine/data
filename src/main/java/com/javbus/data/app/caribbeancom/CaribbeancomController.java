@@ -1,4 +1,4 @@
-package com.javbus.data.app.caribbeancom.controller;
+package com.javbus.data.app.caribbeancom;
 
 import com.javbus.data.common.http.Response;
 import io.swagger.annotations.Api;

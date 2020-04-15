@@ -1,4 +1,4 @@
-package com.javbus.data.app.caribbeancom.dao;
+package com.javbus.data.jpa;
 
 import com.javbus.data.base.movie.domain.MovieEntity;
 import com.javbus.data.base.movie.domain.QMovieEntity;
