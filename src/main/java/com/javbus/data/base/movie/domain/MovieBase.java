@@ -6,6 +6,7 @@ import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
+import java.util.Date;
 
 /**
  * @Auther: wuliangyu
@@ -26,7 +27,7 @@ public class MovieBase extends BaseEntity {
 
     @ApiModelProperty("上映时间")
     @Column(columnDefinition = "date")
-    private String movieUploadDate;
+    private Date movieUploadDate;
 
     @ApiModelProperty("电影时长")
     @Column(columnDefinition = "varchar(30)")
