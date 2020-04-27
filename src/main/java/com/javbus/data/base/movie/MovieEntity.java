@@ -1,25 +1,32 @@
-package com.javbus.data.base.movie.domain;
+package com.javbus.data.base.movie;
 
 import com.javbus.data.common.entity.BaseEntity;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 
 import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Date;
 
 /**
  * @Auther: wuliangyu
- * @Date: 2020/4/14 23:08
+ * @Date: 2020/4/14 22:55
  * @Description:
  */
 @Data
-@MappedSuperclass
-public class MovieBase extends BaseEntity {
+@Entity
+@Table(name = "t_movie")
+@NoArgsConstructor
+public class MovieEntity extends BaseEntity {
 
     @ApiModelProperty("电影id")
     @Column(columnDefinition = "varchar(30) Comment '电影id'")
-    private int movieId;
+    private String movieId;
 
     @ApiModelProperty("电影名")
     @Column(columnDefinition = "varchar(200) Comment '电影名'")
@@ -48,4 +55,5 @@ public class MovieBase extends BaseEntity {
     @ApiModelProperty("电影发行商")
     @Column(columnDefinition = "varchar(30) Comment '电影发行商'")
     private String moviePublisher;
+
 }

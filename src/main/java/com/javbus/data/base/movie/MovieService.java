@@ -1,7 +1,5 @@
 package com.javbus.data.base.movie;
 
-import com.javbus.data.base.movie.domain.MovieEntity;
-import com.javbus.data.base.movie.domain.QMovieEntity;
 import com.javbus.data.base.old.MovieOldDao;
 import com.javbus.data.base.old.MovieOldEntity;
 import com.javbus.data.base.old.QMovieOldEntity;

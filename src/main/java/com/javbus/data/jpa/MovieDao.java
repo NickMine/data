@@ -1,6 +1,6 @@
 package com.javbus.data.jpa;
 
-import com.javbus.data.base.movie.domain.MovieEntity;
+import com.javbus.data.base.movie.MovieEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 

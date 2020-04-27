@@ -1,11 +1,9 @@
 package com.javbus.data.base.movie;
 
-import com.javbus.data.base.movie.domain.MovieDto;
-import com.javbus.data.base.movie.domain.MovieEntity;
+import com.javbus.data.dto.MovieDto;
 import com.javbus.data.jpa.MovieDao;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 

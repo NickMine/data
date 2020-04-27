@@ -2,7 +2,7 @@ package com.javbus.data.app.caribbeancom;
 
 import com.javbus.data.base.movie.MovieComponent;
 import com.javbus.data.base.movie.MovieService;
-import com.javbus.data.base.movie.domain.MovieDto;
+import com.javbus.data.dto.MovieDto;
 import com.javbus.data.common.http.Response;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

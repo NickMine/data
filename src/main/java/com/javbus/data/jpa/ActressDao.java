@@ -1,6 +1,6 @@
 package com.javbus.data.jpa;
 
-import com.javbus.data.base.actress.domain.ActressEntity;
+import com.javbus.data.base.actress.ActressEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 
