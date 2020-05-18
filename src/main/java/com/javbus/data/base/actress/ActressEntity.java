@@ -2,10 +2,7 @@ package com.javbus.data.base.actress;
 
 import com.javbus.data.common.entity.BaseEntity;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,7 +10,7 @@ import javax.persistence.Table;
 import java.util.Date;
 
 /**
- * @Auther: wuliangyu
+ * @author: wuliangyu
  * @Date: 2020/4/22 0:31
  * @Description:
  */

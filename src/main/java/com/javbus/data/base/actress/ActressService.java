@@ -10,6 +10,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -41,6 +42,7 @@ public class ActressService {
         long limit = 100L;
         long offset = 0L;
         while (offset < total) {
+            List<ActressEntity> actressEntities = new ArrayList<>();
             List<ActressOldEntity> actressOldEntities =
                     jpaQueryFactory
                             .selectFrom(actressOldEntity)
@@ -67,7 +69,7 @@ public class ActressService {
                 log.info(actressEntity1.toString());
                 log.info("第" + actressOldEntities.indexOf(one) + "个");
             });
-
+            actressDao.saveAll(actressEntities);
             offset = offset + limit;
         }
         return actressDao.count();

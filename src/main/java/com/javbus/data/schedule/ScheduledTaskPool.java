@@ -1,12 +1,14 @@
 package com.javbus.data.schedule;
 
 import com.javbus.data.base.actress.ActressService;
+import com.javbus.data.base.genre.GenreService;
 import com.javbus.data.base.movie.MovieService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @Auther: wuliangyu
@@ -15,6 +17,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Slf4j
+//@Transactional(rollbackFor = Exception.class)
 public class ScheduledTaskPool {
 
     @Autowired
@@ -23,6 +26,9 @@ public class ScheduledTaskPool {
     @Autowired
     private ActressService actressService;
 
+    @Autowired
+    private GenreService genreService;
+
 
     // initialDelay ：fixedRate() 或fixedDelay()第一次执行前延迟的毫秒数
     //第一次延迟5秒执行，之后按照fixedRate的规则每6000秒执行一次
@@ -30,8 +36,9 @@ public class ScheduledTaskPool {
     @Async
     public void paymentServiceTask() {
         long count;
-        count = actressService.oldDataToNew();
-        log.info(String.valueOf(count));
+//        count = actressService.oldDataToNew();
+//        count = genreService.oldDataToNew();
+//        log.info(String.valueOf(count));
 //        movieService.oldDataToNew();
     }
 }
